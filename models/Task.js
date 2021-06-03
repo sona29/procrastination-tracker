@@ -26,11 +26,20 @@ Task.init(
         },
     },
     {
-        sequelize,
-        timestamps: false,
-        freezeTableName: true,
-        underscored: true,
-        modelName: "task"
-
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: "task"
     }
-    )
+
+);
+
+
+
+
+
+module.exports = Task;
+
+
+
