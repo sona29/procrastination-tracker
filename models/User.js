@@ -18,11 +18,11 @@ User.init(
       autoIncrement: true,
     },
     name: {
-      type: DataTypes.VARCHAR(50),
+      type: DataTypes.STRING,
       allowNull: false,
     },
     email: {
-      type: DataTypes.VARCHAR(50),
+      type: DataTypes.STRING,
       allowNull: false,
       unique: true,
       validate: {

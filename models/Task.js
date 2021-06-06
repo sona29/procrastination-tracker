@@ -12,7 +12,7 @@ Task.init(
             autoIncrement: true
         },
         project_title: {
-            type: DataTypes.VARCHAR(100),
+            type: DataTypes.STRING,
             allowNull: false,
         },
         project_id: {
