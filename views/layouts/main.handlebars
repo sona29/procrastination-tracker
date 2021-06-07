@@ -15,7 +15,7 @@
         style="background-color: #e3f2fd;"
       >
         <div class="container-fluid">
-          <span class="navbar-brand mb-0 h1">TBD</span>
+          <span class="navbar-brand mb-0 h1">TBD...</span>
         </div>
 
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -47,6 +47,9 @@
       </div>
 
     </main>
+    {{#if logged_in}}
+      <script src="/js/logout.js"></script>
+    {{/if}}
 
   </body>
 </html>
