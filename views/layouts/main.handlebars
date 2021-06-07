@@ -1,1 +1,52 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav
+        class="navbar navbar-expand-sm p-4 navbar-light"
+        style="background-color: #e3f2fd;"
+      >
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h1">TBD</span>
+        </div>
 
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="#"
+              >Projects</a>
+            </li>
+            {{#if logged_in}}
+              <li class="nav-item">
+                <a class="nav-link" href="#">Logout</a>
+              </li>
+            {{else}}
+              <li class="nav-item">
+                <a class="nav-link" href="#">Login</a>
+              </li>
+            {{/if}}
+
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container-fluid">
+        {{{body}}}
+      </div>
+
+    </main>
+
+  </body>
+</html>
