@@ -1,17 +1,11 @@
 [
-    {
-      
-      "project_title": "This is task 1"
-     
-    },
-    {
-      
-      "project_title": "This is task 2"
-      
-    },
-    {
-      
-      "project_title": "This is task 3"
-      
-    }
-  ]
+  {
+    "title": "This is task 1"
+  },
+  {
+    "title": "This is task 2"
+  },
+  {
+    "title": "This is task 3"
+  }
+]

@@ -1,23 +1,24 @@
-<div class="row justify-content-center">
+ <div class="row justify-content-center">
           <div class="col-12 col-md-2">
-            <span style="font-size: 9em"><i class="{{emoji}}"></span></i>
+            <span style="font-size: 9em"><i class="{{icon_ref}}"></span></i>
           </div>
           <div class="col-12 col-md-9">
           
+          
             <div class="card text-center mb-4 border-info">
                 <div class="card-header text-white bg-info">
-                 {{title}}
+                 {{name}}
                 </div>
                 <div class="card-body text-info">
                   
                   <p class="card-text">{{description}}</p>
                   <div class="progress">
-                    <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                   
                 </div>
                 <div class="card-footer text-muted border-info">
-                  Due: {{due_date}}
+                  Due: {{format_date due_date}}
                 </div>
               </div><!--END OF CARD-->
               <div class="card text-center">
@@ -28,20 +29,24 @@
                   
                   <p class="card-text">
 
-                    {{#if task.length}}
+                    {{#if tasks.length}}
                     {{#each tasks as |task|}}
 
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="{{task.description}}" id="task-{{task.id}}">
+                        <input class="form-check-input" type="checkbox" value="{{task.title}}" id="task-{{task.id}}"{{#if task.completed}} checked {{/if}}>
                         <label class="form-check-label" for="task-{{task.id}}">
-                          {{task.description}}
+                          {{task.title}}
                         </label>
                       </div>
+
                     {{/each}}
                     {{/if}}
 
 
                   </p>
+                   
+                    <a href="/post/{{id}}/comment" class="btn btn-outline-info">New Task</a>
+       
                  
                 </div>
               </div>
@@ -49,3 +54,7 @@
 
         
         </div>
+        <!--END OF ROW-->
+      </div>
+      
+      <script src="../js/progressBar.js"></script>

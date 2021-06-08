@@ -82,7 +82,7 @@
                     {{#each tasks as |task|}}
 
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="{{task.description}}" id="task-{{task.id}}">
+                        <input class="form-check-input" type="checkbox" value="{{task.description}}" id="task-{{task.id}}" {{#if task.completed}} checked {{/if}}>
                         <label class="form-check-label" for="task-{{task.id}}">
                           {{task.description}}
                         </label>

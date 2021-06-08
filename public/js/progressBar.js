@@ -24,3 +24,5 @@ const changeDisplay = (event) => {
 checkBox.forEach((checkbox) => {
   checkbox.addEventListener("change", changeDisplay);
 });
+
+//add fetch call to update task boolean iscompleted to true

@@ -25,8 +25,14 @@ Project.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    date_due: {
+    due_date: {
       type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+    },
+    icon_ref: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     user_id: {
       type: DataTypes.INTEGER,
