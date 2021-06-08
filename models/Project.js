@@ -10,7 +10,7 @@ Project.init(
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      primayKey: true,
+      primaryKey: true,
       autoIncrement: true,
     },
     name: {
