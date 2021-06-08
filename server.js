@@ -20,8 +20,18 @@ const sess = {
     })
 };
 
+//MVC handlebars
+
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
+
+//load static files in th epublic folder
+app.use(express.static(path.join(__dirname, 'public')));
+
+//cookie session
 app.use(session(sess));
 
+//body parser
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
