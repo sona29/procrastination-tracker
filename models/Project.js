@@ -40,9 +40,9 @@ Project.init(
   {
     sequelize,
     timestamps: false,
-    freezeTablename: true,
-    underscored: true,
-    modelName: "Project",
+    freezeTableName: true,
+    underscored: false,
+    modelName: "project",
   }
 );
 
