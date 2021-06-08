@@ -62,7 +62,7 @@
                   
                   <p class="card-text">{{description}}</p>
                   <div class="progress">
-                    <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                   
                 </div>
@@ -87,6 +87,27 @@
                           {{task.description}}
                         </label>
                       </div>
+
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="{{task.description}}" id="task-{{task.id}}">
+                        <label class="form-check-label" for="task-{{task.id}}">
+                          {{task.description}}
+                        </label>
+                      </div>
+
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="{{task.description}}" id="task-{{task.id}}">
+                        <label class="form-check-label" for="task-{{task.id}}">
+                          {{task.description}}
+                        </label>
+                      </div>
+
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="{{task.description}}" id="task-{{task.id}}">
+                        <label class="form-check-label" for="task-{{task.id}}">
+                          {{task.description}}
+                        </label>
+                      </div>
                     {{/each}}
                     {{/if}}
 
@@ -101,6 +122,7 @@
         </div>
         <!--END OF ROW-->
       </div>
+      <script src="../public/js/progressBar.js"></script>
     </main>
   </body>
 </html>
