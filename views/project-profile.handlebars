@@ -33,7 +33,7 @@
                     {{#each tasks as |task|}}
 
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="{{task.title}}" id="task-{{task.id}}"{{#if task.completed}} checked {{/if}}>
+                        <input class="form-check-input" type="checkbox" value="{{task.title}}" id="{{task.id}}"{{#if task.is_completed}} checked {{/if}}>
                         <label class="form-check-label" for="task-{{task.id}}">
                           {{task.title}}
                         </label>
