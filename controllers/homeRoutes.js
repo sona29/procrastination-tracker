@@ -6,11 +6,11 @@ router.get("/", (req, res) => {
   res.render("homepage", { logged_in: req.session.logged_in });
 });
 
-router.get("/project", (req, res) => {
+router.get("/project", withAuth, (req, res) => {
   res.render("new-project", { logged_in: req.session.logged_in });
 });
 
-router.get("/profile", async (req, res) => {
+router.get("/profile", withAuth, async (req, res) => {
   try {
     const allProject = await Project.findAll({
       where: {
@@ -29,7 +29,7 @@ router.get("/profile", async (req, res) => {
   }
 });
 
-router.get("/project/:id", async (req, res) => {
+router.get("/project/:id", withAuth, async (req, res) => {
   try {
     const projectData = await Project.findByPk(req.params.id, {
       include: [
