@@ -7,14 +7,14 @@ router.get("/", (req, res) => {
 });
 
 router.get("/project", withAuth, (req, res) => {
-  res.render("new-project", { logged_in: req.session.logged_in });
+  res.render("new-project", { logged_in: true });
 });
 
 router.get("/profile", withAuth, async (req, res) => {
   try {
     const allProject = await Project.findAll({
       where: {
-        user_id: req.session.user_id,
+        user_id: true,
       },
     });
 
@@ -22,7 +22,7 @@ router.get("/profile", withAuth, async (req, res) => {
 
     res.render("profile", {
       projects,
-      logged_in: req.session.logged_in,
+      logged_in: true,
     });
   } catch (err) {
     res.status(400).json(err);
@@ -43,7 +43,7 @@ router.get("/project/:id", withAuth, async (req, res) => {
 
     res.render("project-profile", {
       ...project,
-      logged_in: req.session.logged_in,
+      logged_in: true,
     });
   } catch (err) {
     res.status(400).json(err);
