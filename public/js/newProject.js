@@ -15,7 +15,9 @@ const newProject = async (event) => {
     headers: { "Content-Type": "application/json" },
   });
   if (response.ok) {
-    alert("Success");
+    document.location.replace("/profile");
+  } else {
+    alert(response.statusText);
   }
 };
 

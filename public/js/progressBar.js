@@ -39,7 +39,7 @@ const updateTask = async (checked) => {
     if (response.ok) {
       console.log("SUCCESS");
     } else {
-      // alert(response.statusText);
+      alert(response.statusText);
     }
   } else {
     const completed = "false";
@@ -51,7 +51,7 @@ const updateTask = async (checked) => {
     if (response.ok) {
       console.log("SUCCESS");
     } else {
-      // alert(response.statusText);
+      alert(response.statusText);
     }
   }
 };
