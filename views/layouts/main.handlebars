@@ -17,7 +17,7 @@
   <body>
     <header>
       <nav
-        class="navbar navbar-expand-sm p-4 navbar-light"
+        class="navbar navbar-expand-sm p-4 mb-4 navbar-light"
         style="background-color: #e3f2fd;"
       >
         <div class="container-fluid">
@@ -30,16 +30,16 @@
               <a
                 class="nav-link active"
                 aria-current="page"
-                href="#"
+                href="/profile"
               >Projects</a>
             </li>
             {{#if logged_in}}
               <li class="nav-item">
-                <a class="nav-link" href="#">Logout</a>
+                <a class="nav-link" id="logout">Logout</a>
               </li>
             {{else}}
               <li class="nav-item">
-                <a class="nav-link" href="#">Login</a>
+                <a class="nav-link" href="/login">Login</a>
               </li>
             {{/if}}
 

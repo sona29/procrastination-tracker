@@ -11,7 +11,7 @@ Tasks.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    project_title: {
+    title: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -22,6 +22,16 @@ Tasks.init(
         model: "project",
         key: "id",
       },
+    },
+    // start_date: {
+    //   type: DataTypes.DATE,
+    // },
+    // due_date: {
+    //   type: DataTypes.DATE,
+    // },
+    is_completed: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
     },
   },
   {
