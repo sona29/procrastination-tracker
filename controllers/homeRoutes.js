@@ -6,15 +6,15 @@ router.get("/", (req, res) => {
   res.render("homepage", { logged_in: req.session.logged_in });
 });
 
-router.get("/project", (req, res) => {
-  res.render("new-project", { logged_in: req.session.logged_in });
+router.get("/project", withAuth, (req, res) => {
+  res.render("new-project", { logged_in: true });
 });
 
-router.get("/profile", async (req, res) => {
+router.get("/profile", withAuth, async (req, res) => {
   try {
     const allProject = await Project.findAll({
       where: {
-        user_id: req.session.user_id,
+        user_id: true,
       },
     });
 
@@ -22,14 +22,14 @@ router.get("/profile", async (req, res) => {
 
     res.render("profile", {
       projects,
-      logged_in: req.session.logged_in,
+      logged_in: true,
     });
   } catch (err) {
     res.status(400).json(err);
   }
 });
 
-router.get("/project/:id", async (req, res) => {
+router.get("/project/:id", withAuth, async (req, res) => {
   try {
     const projectData = await Project.findByPk(req.params.id, {
       include: [
@@ -43,7 +43,7 @@ router.get("/project/:id", async (req, res) => {
 
     res.render("project-profile", {
       ...project,
-      logged_in: req.session.logged_in,
+      logged_in: true,
     });
   } catch (err) {
     res.status(400).json(err);
