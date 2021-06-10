@@ -2,6 +2,10 @@ const router = require("express").Router();
 const { User, Project, Tasks } = require("../models");
 const withAuth = require("../utils/auth");
 
+router.get("/", (req, res) => {
+  res.render("homepage", { logged_in: req.session.logged_in });
+});
+
 router.get("/project", (req, res) => {
   res.render("new-project", { logged_in: req.session.logged_in });
 });
