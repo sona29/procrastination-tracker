@@ -34,6 +34,22 @@ Project.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    google_ref: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    ical_ref: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    outlook_ref: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    yahoo_ref: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     user_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
