@@ -7,10 +7,9 @@ The Procratination Tracker is a web based application designed to help keep trac
 * User sign up, login and sign out functions
 * Save and view tasks and task components
 * Set due dates for tasks and components
-* Web browser and email notifications
+* 
 * Assign any number of "To be complete" components to any task
 * Dynamic progress bar for each and every task
-* Ranking system where each user can see their individual rank grade according to the number of components and tasks complete over time. Users must be completeing tasa and components in order to maintain or increase current ranking position
 
 
 ### **Technologies**
@@ -20,12 +19,17 @@ The Procratination Tracker is a web based application designed to help keep trac
 * BootStrap
 * Node js
 * Express js
-* Awesome-notifications package
+* Express Handlebars package
+* Add2Calender package
 * Sequalize package
 
 ### **Future Development**
 
-Aim to add user SMS functionality for reminders and prompts. Feedback from SMS prompts to enable automatic updating of user components and tasks on the fly.
+Web browser and email notifications.
+
+Adding user SMS functionality for reminders and prompts. Feedback from SMS prompts to enable automatic updating of user components and tasks on the fly.
+
+Ranking reward system where each user can see their individual rank grade according to the number of components and tasks complete over time. Users must be completeing tasa and components in order to maintain or increase current ranking position
 
 ### **Links**
 
