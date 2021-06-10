@@ -1,1 +1,23 @@
+<div class="row justify-content-center">
+  {{#if projects}}
+    {{#each projects as |project|}}
+      <div class="col-12 col-md-4 col-lg-3">
+        <div class="card text-center" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">{{name}}</h5>
 
+            <span style="font-size: 9em">
+              <i class="{{icon_ref}}"></i>
+            </span>
+
+            <a href="/project/{{id}}" class="stretched-link"></a>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  {{/if}}
+
+</div>
+<div class="row justify-content-center">
+  <a href="/project" class="btn btn-outline-info mt-4">New Project</a>
+</div>
