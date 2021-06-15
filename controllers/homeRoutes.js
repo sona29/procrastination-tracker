@@ -50,6 +50,28 @@ router.get("/project/:id", withAuth, async (req, res) => {
   }
 });
 
+//for new task
+router.get("/task/:id", withAuth, async (req, res) => {
+  try {
+    const projectData = await Project.findByPk(req.params.id, {
+      include: [
+        {
+          model: Tasks,
+        },
+      ],
+    });
+
+    const project = projectData.get({ plain: true });
+
+    res.render("new-task", {
+      ...project,
+      logged_in: true,
+    });
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
 router.get("/login", (req, res) => {
   res.render("login");
 });
